@@ -1,0 +1,23 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+@font-face {
+  font-family: 'Arquitecta';
+  font-style: normal;
+  font-weight: bold;
+  src:
+          url(./font/arquitecta-bold-webfont.woff2) format('woff2'),
+          url(./font/arquitecta-bold-webfont.woff) format('woff');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'NanumSquare', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

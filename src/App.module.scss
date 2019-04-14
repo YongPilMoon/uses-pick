@@ -1,0 +1,12 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  .imgWrapper {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+  }
+  img {
+    width: 100%;
+  }
+}
