@@ -21,7 +21,7 @@ const productPositions = [{
   right: '6%',
   alignRight: true,
 }, {
-  bottom: '14%',
+  top: '77%',
   right: '6%',
   alignRight: true,
 }];
