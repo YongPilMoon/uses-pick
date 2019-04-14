@@ -3,6 +3,8 @@ import styles from './App.module.scss';
 import images from './images';
 import axios from 'axios';
 import Product from './Product/Product';
+import TrendKeywords from './TrendKeywords/TrendKeywords';
+import MediaQuery from 'react-responsive';
 
 const productPositions = [{
   top: '25%',
@@ -19,7 +21,7 @@ const productPositions = [{
   right: '6%',
   alignRight: true,
 }, {
-  bottom: '13%',
+  bottom: '14%',
   right: '6%',
   alignRight: true,
 }];
@@ -36,7 +38,7 @@ class App extends Component {
 
 
   render() {
-    const {products} = this.state.data;
+    const {products, trendKeywords} = this.state.data;
     return (
       <div className={styles.app}>
         <div className={styles.imgWrapper}>
@@ -51,6 +53,22 @@ class App extends Component {
               description={product.description}
               url={product.url}
             />)}
+          {trendKeywords && <div className={styles.trendKeywords}>
+            <MediaQuery query="(min-device-width: 500px)">
+              <TrendKeywords
+                size={110}
+                fontSizes={[10, 20, 30]}
+                fontFamily={'NanumSquare'}
+                trendKeywords={trendKeywords}/>
+            </MediaQuery>
+            <MediaQuery query="(max-device-width: 500px)">
+              <TrendKeywords
+                size={100}
+                fontSizes={[10, 14, 20]}
+                fontFamily={'NanumSquare'}
+                trendKeywords={trendKeywords}/>
+            </MediaQuery>
+          </div>}
         </div>
       </div>
     );

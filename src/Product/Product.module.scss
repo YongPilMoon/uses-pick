@@ -1,6 +1,10 @@
 h1 {
   margin: 0;
   font-weight: 800;
+  font-size: 30px;
+  @media (max-width: 500px) {
+    font-size: 18px;
+  }
 }
 .product {
   position: absolute;
@@ -11,14 +15,24 @@ h1 {
     font-size: 25px;
     font-weight: bold;
     font-family: 'Arquitecta', sans-serif;
+    @media (max-width: 500px) {
+      font-size: 16px;
+    }
   }
 
   .heart {
     width: 20px;
     margin-right: 10px;
+    @media (max-width: 500px) {
+      width: 12px;
+      margin-right: 6px;
+    }
   }
 
   .description {
     color: #919292;
+    @media (max-width: 500px) {
+      font-size: 10px;
+    }
   }
 }
